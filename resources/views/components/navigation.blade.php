@@ -92,10 +92,6 @@
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('darkMode', isDark);
         updateDarkModeIcons(isDark);
-        
-        // Debug logging
-        console.log('Dark mode toggled:', isDark);
-        console.log('HTML class list:', document.documentElement.className);
     }
 
     function updateDarkModeIcons(isDark) {
