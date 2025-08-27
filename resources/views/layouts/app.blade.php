@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="transition-colors duration-300">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen font-sans">
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen font-sans transition-colors duration-300">
     @include('components.navigation')
     @yield('content')
     @include('components.footer')

@@ -1,5 +1,5 @@
 <!-- resources/views/components/footer.blade.php -->
-<footer class="bg-gray-900 text-white py-12">
+<footer class="bg-gray-900 dark:bg-gray-950 text-white py-12 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-6 text-center">
         <div class="flex items-center justify-center gap-2 mb-6">
             <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -10,10 +10,10 @@
             </div>
             <span class="text-2xl font-bold">Bloggable</span>
         </div>
-        <p class="text-gray-400 mb-6">
+        <p class="text-gray-400 dark:text-gray-500 mb-6">
             Empowering writers to share their stories with the world.
         </p>
-        <p class="text-gray-500 text-sm">
+        <p class="text-gray-500 dark:text-gray-600 text-sm">
             © {{ date('Y') }} Bloggable. All rights reserved.
         </p>
     </div>
