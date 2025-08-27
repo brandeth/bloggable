@@ -10,12 +10,12 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/second', function () {
-    return view('second');
-});
+use App\Http\Controllers\BlogController;
 
-Route::view('/third', 'third');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');

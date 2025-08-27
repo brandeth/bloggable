@@ -19,7 +19,7 @@
             <div class="hidden md:flex items-center gap-6">
                 <a href="{{ route('about') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium {{ request()->routeIs('about') ? 'text-blue-600 dark:text-blue-400' : '' }}">About</a>
                 <a href="{{ route('contact') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium {{ request()->routeIs('contact') ? 'text-blue-600 dark:text-blue-400' : '' }}">Contact</a>
-                
+                <a href="{{ route('blog.index') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium {{ request()->routeIs('blog.index') ? 'text-blue-600 dark:text-blue-400' : '' }}">Blog</a>
                 <!-- Dark Mode Toggle -->
                 <button id="dark-mode-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                     <!-- Sun Icon (Light Mode) -->
@@ -31,7 +31,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
-                
                 <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
                     Start Writing
                 </button>
@@ -49,7 +48,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
-                
+
                 <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -62,6 +61,7 @@
             <div class="flex flex-col gap-4">
                 <a href="{{ route('about') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2 {{ request()->routeIs('about') ? 'text-blue-600 dark:text-blue-400' : '' }}">About</a>
                 <a href="{{ route('contact') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2 {{ request()->routeIs('contact') ? 'text-blue-600 dark:text-blue-400' : '' }}">Contact</a>
+                <a href="{{ route('blog.index') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2 {{ request()->routeIs('blog.index') ? 'text-blue-600 dark:text-blue-400' : '' }}">Blog</a>
                 <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 font-medium text-center">
                     Start Writing
                 </button>
@@ -79,9 +79,9 @@
     // Dark mode functionality
     function initDarkMode() {
         // Check for saved dark mode preference or default to light mode
-        const isDark = localStorage.getItem('darkMode') === 'true' || 
-                      (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        
+        const isDark = localStorage.getItem('darkMode') === 'true' ||
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
         if (isDark) {
             document.documentElement.classList.add('dark');
             updateDarkModeIcons(true);
@@ -98,7 +98,7 @@
         // Desktop icons
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
-        
+
         // Mobile icons
         const mobileSunIcon = document.getElementById('mobile-sun-icon');
         const mobileMoonIcon = document.getElementById('mobile-moon-icon');
@@ -122,7 +122,7 @@
 
         // Desktop dark mode toggle
         document.getElementById('dark-mode-toggle')?.addEventListener('click', toggleDarkMode);
-        
+
         // Mobile dark mode toggle
         document.getElementById('mobile-dark-mode-toggle')?.addEventListener('click', toggleDarkMode);
     });
