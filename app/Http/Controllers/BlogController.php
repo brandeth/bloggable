@@ -41,7 +41,11 @@ class BlogController extends Controller
             'published_at' => now(),
         ];
         $related = collect([
-            (object)['id' => 2, 'title' => 'Another Post'],
+            (object)[
+                'id' => 2,
+                'title' => 'Another Post',
+                'excerpt' => 'A brief description of another interesting post on our blog.'
+            ],
         ]);
         return view('blog.show', compact('post', 'related'));
     }
