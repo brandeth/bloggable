@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<article class="bg-white dark:bg-gray-800 rounded-xl shadow p-8 md:p-12 min-w-96 md:min-w-[600px]">
+<article class="bg-white dark:bg-gray-800 rounded-xl shadow p-8 md:p-12 min-w-96 md:min-w-[40rem]">
     <img src="{{ asset($post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded-lg mb-6">
     <div class="prose prose-lg max-w-none dark:prose-invert">
         {!! $post->body !!}
